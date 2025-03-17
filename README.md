@@ -2,8 +2,7 @@
 
 A powerful and intuitive web application that leverages Google's Gemini 2.0 Flash Experimental API to generate, edit, and enhance images through AI. With a modern, chat-like interface, this playground makes it easy to explore Gemini's creative capabilities.
 
-![Screenshot 2025-03-17 at 18 44 37](https://github.com/user-attachments/assets/93bcd047-3196-4d9f-a266-fb819c15f4fd)
-
+![Screenshot 2025-03-17 at 18 44 37](https://github.com/user-attachments/assets/6ea1a725-2e33-4612-9e14-2e71dc4c56a4)
 
 ## Key Features
 
