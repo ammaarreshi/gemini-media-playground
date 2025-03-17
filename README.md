@@ -11,6 +11,13 @@ A powerful and intuitive web application that leverages Google's Gemini 2.0 Flas
 - Flexible customization options for aspect ratio and image quality
 - Support for various artistic styles and visual concepts
 
+### 🎬 Video Generation
+
+- Create stunning videos from text prompts using fal.ai
+- Transform still images into dynamic video sequences
+- Control video duration and stylistic elements
+- Seamless integration with the chat interface
+
 ### 🔄 Native Image Editing
 
 - Edit generated images directly within the application using natural language prompts
@@ -38,6 +45,7 @@ A powerful and intuitive web application that leverages Google's Gemini 2.0 Flas
 - Node.js version ^18.18.0 or ^19.8.0 or >= 20.0.0
 - npm or yarn package manager
 - Gemini API key from Google AI Studio
+- fal.ai API key for video generation
 
 ### Installation
 
@@ -57,10 +65,11 @@ A powerful and intuitive web application that leverages Google's Gemini 2.0 Flas
    ```
 
 3. **API Key Configuration**
-   Create a `.env.local` file in the root directory with your Gemini API key:
+   Create a `.env.local` file in the root directory with your API keys:
 
    ```
-   NEXT_PUBLIC_GEMINI_API_KEY=your_api_key_here
+   NEXT_PUBLIC_GEMINI_API_KEY=your_gemini_api_key_here
+   NEXT_PUBLIC_FAL_KEY=your_fal_ai_key_here
    ```
 
    > **Note:** To obtain a Gemini API key:
@@ -70,6 +79,14 @@ A powerful and intuitive web application that leverages Google's Gemini 2.0 Flas
    > 3. Navigate to the API Keys section
    > 4. Generate a new API key
    > 5. Copy the key and paste it into your `.env.local` file
+   >
+   > **To obtain a fal.ai API key:**
+   >
+   > 1. Visit [fal.ai](https://www.fal.ai/)
+   > 2. Create an account or sign in
+   > 3. Navigate to the API Keys section in your dashboard
+   > 4. Generate a new API key
+   > 5. Copy the key and add it to your `.env.local` file
 
 4. Start the development server
 
@@ -91,6 +108,15 @@ A powerful and intuitive web application that leverages Google's Gemini 2.0 Flas
 3. Wait for Gemini to process and generate your image
 4. The generated image will appear in the chat thread
 
+### Generating Videos
+
+1. Type a prompt that includes video generation intent
+   - Example: "Generate a video of a spaceship flying through an asteroid field"
+   - Or: "Turn this image into a video of waves crashing" (when an image is attached)
+2. Click the send button or press Enter
+3. Wait for fal.ai to process your request and generate the video
+4. The generated video will appear in the chat thread and can be played directly
+
 ### Editing Images
 
 1. **From scratch:**
@@ -109,6 +135,7 @@ A powerful and intuitive web application that leverages Google's Gemini 2.0 Flas
 - Be specific in your prompts
 - Include details about style, mood, lighting, and composition
 - For edits, clearly state what should change and what should stay the same
+- For videos, specify movement, timing, and transitions
 - Try different phrasings if you don't get the result you want
 
 ## Technical Details
@@ -117,7 +144,9 @@ A powerful and intuitive web application that leverages Google's Gemini 2.0 Flas
 
 - **Frontend:** Next.js, React, TypeScript
 - **Styling:** Tailwind CSS, shadcn/ui components, Google Sans font
-- **AI Integration:** Google Generative AI SDK
+- **AI Integration:**
+  - Google Generative AI SDK for image generation and editing
+  - fal.ai API for video generation
 - **Build Tools:** Turbopack for faster development
 
 ### Architecture
